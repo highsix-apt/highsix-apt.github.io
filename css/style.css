@@ -1,0 +1,59 @@
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  to {
+    background-position: 200% 200%;
+  }
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  margin: 0 20px;
+}
+
+div {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.img {
+  height: 100%;
+  width: 160px;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.title {
+  background: repeating-linear-gradient(45deg, #ffffff, #ffffff 10px, #000000 10px, #000000 20px);
+  background-size: 200% 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 100px;
+  animation: slide 5s infinite linear;
+}
+
+.subtitle {
+  animation: blink 3s infinite linear;
+}
