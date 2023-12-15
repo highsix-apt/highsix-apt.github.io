@@ -1,12 +1,10 @@
 @keyframes blink {
-  0% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -18,30 +16,48 @@
 
 body {
   background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 90vh;
   margin: 0 20px;
 }
 
-div {
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
-  height: 100%;
-  width: 100%;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-.img {
-  height: 100%;
+.block-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-header {
+  position: fixed;
+  top: 0;
+  width: 200px;
+}
+
+img {
+  width: 100%;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.image-king {
   width: 160px;
-}
-
-.header {
-  text-align: center;
-  color: white;
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
 
 .title {
@@ -51,9 +67,11 @@ div {
   -webkit-background-clip: text;
   background-clip: text;
   font-size: 100px;
-  animation: slide 5s infinite linear;
+  animation: slide 0.7s infinite linear;
 }
 
 .subtitle {
   animation: blink 3s infinite linear;
+  color: white;
+  font-size: 30px;
 }
