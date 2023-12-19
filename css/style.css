@@ -49,7 +49,7 @@ body {
 .image-header {
   position: fixed;
   top: 0;
-  width: 200px;
+  width: 15vw;
 }
 
 img {
@@ -74,15 +74,14 @@ img {
 .image-profile {
   border-radius: 100%;
   border: 5px solid #ffffff;
-  width: 200px;
-  height: 200px;
+  width: 14.5vw;
+  height: 14.5vw;
   position: relative;
   overflow: hidden;
   transition: opacity 0.3s ease;
 }
 
-.image-profile img,
-.image-profile a {
+.image-profile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -116,19 +115,19 @@ img {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 100px;
+  font-size: 16.5vh;
   animation: slide 0.7s infinite linear;
 }
 
 .subtitle {
   animation: blink 3s infinite linear;
   color: white;
-  font-size: 30px;
+  font-size: 5vh;
 }
 
 .main-name {
   color: white;
-  font-size: 50px;
+  font-size: 8.2vh;
 }
 
 .profiles {
