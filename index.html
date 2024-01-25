@@ -9,28 +9,6 @@
     <link rel="stylesheet" href="./css/overlay.css" />
     <link rel="icon" href="./icon.ico" type="image/x-icon" />
     <title>highsix</title>
-    <script async>
-      const access = localStorage.getItem("access") || "false";
-      localStorage.setItem("access", access);
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const overlay = document.querySelector(".overlay");
-        const removeOverlayButton = document.querySelector(".delete-overlay");
-
-        overlay.style.display = access === "true" ? "none" : "flex";
-        document.body.style.opacity = access === "true" ? 0 : 1;
-
-        removeOverlayButton.addEventListener("click", function () {
-          localStorage.setItem("access", "true");
-          location.reload();
-        });
-
-        setTimeout(function () {
-          document.body.style.opacity = 1;
-          localStorage.setItem("access", "false");
-        }, 2000);
-      });
-    </script>
   </head>
   <body class="back-row-toggle splat-toggle">
     <audio id="player" preload="auto" autoplay loop>
@@ -81,5 +59,6 @@
     </section>
     <script src="./js/script.js"></script>
     <script src="./js/rain.js"></script>
+    <script src="./js/overlay.js"></script>
   </body>
 </html>
