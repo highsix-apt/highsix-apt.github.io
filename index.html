@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/fonts/fonts.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/rain.css" />
     <link rel="icon" href="./icon.ico" type="image/x-icon" />
     <title>highsix</title>
   </head>
-  <body>
+  <body class="back-row-toggle splat-toggle">
     <audio id="player" preload="auto" autoplay loop>
       <source src="music/blesscastle.mp3" type="audio/mp3" />
     </audio>
@@ -18,6 +19,9 @@
     <div class="image-header right">
       <img src="img/bless2.jpeg" alt="bless2" />
     </div>
+
+    <div class="rain front-row"></div>
+    <div class="rain back-row"></div>
 
     <section class="container">
       <header class="block-container">
@@ -49,5 +53,6 @@
       </article>
     </section>
     <script src="./js/script.js"></script>
+    <script src="./js/rain.js"></script>
   </body>
 </html>
