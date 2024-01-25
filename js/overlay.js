@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   removeOverlayButton.addEventListener("click", function () {
     localStorage.setItem("access", "true");
-    location.reload();
+    setTimeout(function () {
+      location.reload();
+    }, 500);
   });
 
   setTimeout(function () {
