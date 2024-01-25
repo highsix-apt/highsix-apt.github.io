@@ -10,6 +10,7 @@ overlay.style.display = access === "true" ? "none" : "flex";
 
 removeOverlayButton.addEventListener("click", function () {
   localStorage.setItem("access", "true");
+  document.body.style.opacity = 0;
   location.reload();
 });
 
