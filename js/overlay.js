@@ -1,20 +1,26 @@
-const access = localStorage.getItem("access") || "false";
-localStorage.setItem("access", access);
-
-document.body.style.opacity = access === "true" ? 0 : 1;
-
 const overlay = document.querySelector(".overlay");
-const removeOverlayButton = document.querySelector(".delete-overlay");
+const button = document.querySelector(".delete-overlay");
 
-overlay.style.display = access === "true" ? "none" : "flex";
+const hasAccess = sessionStorage.getItem("access") === "true";
 
-removeOverlayButton.addEventListener("click", function () {
-  localStorage.setItem("access", "true");
-  document.body.style.opacity = 0;
-  location.reload();
+if (hasAccess) {
+  overlay.style.display = "none";
+  document.querySelector(".page-content").classList.add("fade-in");
+} else {
+  overlay.style.display = "flex";
+}
+
+button.addEventListener("click", () => {
+  sessionStorage.setItem("access", "true");
+
+  overlay.classList.add("fade-out");
+
+  overlay.addEventListener(
+    "transitionend",
+    () => {
+      overlay.style.display = "none";
+      document.querySelector(".page-content").classList.add("fade-in");
+    },
+    { once: true },
+  );
 });
-
-setTimeout(function () {
-  document.body.style.opacity = 1;
-  localStorage.setItem("access", "false");
-}, 2000);
